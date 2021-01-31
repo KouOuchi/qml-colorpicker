@@ -431,4 +431,8 @@ Item {
             }
         }
     }
+
+    function clear_selection() {
+        group.checkState = Qt.Unchecked
+    }
 }

@@ -266,6 +266,9 @@ Rectangle {
     // set color from outside
     function setColor(color) {
 
+        // fix : If you selected color in palette, you can't select the palette.
+        paletts.clear_selection()
+
         // color object
         var c = Qt.tint(color, "transparent")
 
