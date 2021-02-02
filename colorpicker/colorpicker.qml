@@ -267,17 +267,14 @@ Rectangle {
     function setColor(color) {
 
         // fix : If you selected color in palette, you can't select the palette.
-        paletts.clear_selection()
+        paletts.setValue(color)
 
-        // color object
-        var c = Qt.tint(color, "transparent")
-
-        console.debug('set_color is called with:'+c)
+        console.debug('set_color is called with:'+color)
 
         // set alpha
-        alphaSlider.setValue(c.a)
+        alphaSlider.setValue(color.a)
 
         // set rgb. Now it's insufficient to update hue related component.
-        colorPicker.colorValue = c
+        colorPicker.colorValue = color
     }
 }
